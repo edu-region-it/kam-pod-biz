@@ -1,0 +1,6 @@
+@{
+    var db = Database.Open("kam-pod-biz");
+    var sql = @"SELECT * FROM Persons";
+    var data = db.Query(sql);
+    Json.Write(data, Response.Output);
+}
